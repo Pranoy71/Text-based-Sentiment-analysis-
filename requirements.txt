@@ -8,3 +8,4 @@ huggingface-hub==0.14.1
 nltk==3.8.1
 gunicorn==22.0.0
 tensorflow==2.14.0
+Flask==3.0.3
