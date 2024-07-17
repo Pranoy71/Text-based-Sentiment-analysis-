@@ -1,31 +1,51 @@
-# Mental Health Chatbot Project
+# Sentiment Analysis Web Application
 
-## Overview
+This project is a web application for sentiment analysis, which allows users to input text and receive a sentiment prediction. The application is built using Flask and leverages a deep learning model to perform sentiment analysis on the given text.
 
-This project focuses on the development of a mental health chatbot using deep learning techniques. The chatbot is designed to engage users in meaningful conversations and provide valuable feedback based on their input. The core of this project lies in a CNN-based deep learning model, which processes text data to understand user sentiment and generate appropriate responses.
+## Project Overview
 
-## Project Features
+The main components of the project include:
 
-- **Deep Learning Model:** The project employs a Convolutional Neural Network (CNN) model with 1D CNN layers to extract features from text data.
-- **Text Vectorization:** Utilizes CountVectorizer with a maximum of 10,000 features and n-grams ranging from 1 to 3 for text preprocessing.
-- **Flask App:** A Flask web application serves as the interface for user interactions, allowing users to communicate with the chatbot seamlessly.
+1. **Deep Learning Model**: The core of the sentiment analysis functionality is a CNN-based deep learning model. This model uses 1D Convolutional Neural Network (CNN) layers to extract features from text data. The model is trained with a CountVectorizer that has a maximum feature size of 10,000 and considers n-grams ranging from 1 to 3.
+
+2. **Flask Web Application**: The frontend of the application is built using HTML and CSS to provide a user-friendly interface. Users can enter text into a form, and upon submission, the text is sent to the backend Flask application, which processes the text and returns the sentiment prediction.
 
 ## Model Details
 
-The deep learning model used in this project is designed to process text data efficiently. The key components of the model are:
+- **Architecture**: The model is a CNN-based deep learning model that utilizes 1D CNN layers to extract textual features.
+- **Vectorization**: The text is vectorized using a CountVectorizer with a maximum of 10,000 features and n-grams ranging from 1 to 3.
+- **Preprocessing**: Text preprocessing includes converting text to lowercase, removing non-alphabetic characters, stemming, and removing stop words.
 
-- **1D CNN Layers:** These layers are responsible for extracting relevant features from the text data, capturing important patterns and structures.
-- **CountVectorizer:** This tool converts the text data into a matrix of token counts, with a maximum feature limit of 10,000 and n-grams ranging from 1 to 3.
+## Project Structure
 
-## Flask App
+- /your-project
+- /templates
+- index.html
+- app.py
+- CountVectorizer_v4.pkl # CountVectorizer file
+- encoder_v4.pkl # LabelEncoder file
+- mental_health_classification_model_v4_10000_feature.keras # Trained model file
 
-The Flask application provides a user-friendly interface for interacting with the chatbot. It handles user inputs, processes them through the deep learning model, and returns appropriate responses. The app is designed to be lightweight and responsive, ensuring a smooth user experience.
 
-## Getting Started
 
-To run the project locally, follow these steps:
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/mental-health-chatbot.git
-   cd mental-health-chatbot
+## Usage
+
+1. Open the web application in your browser.
+2. Enter the text you want to analyze in the provided text area.
+3. Click the "Analyze Sentiment" button.
+4. The application will display the sentiment prediction for the entered text.
+
+
+## Conclusion
+
+This project demonstrates the integration of a CNN-based deep learning model with a Flask web application to perform sentiment analysis. The application provides a simple and intuitive interface for users to input text and receive sentiment predictions.
+
+## Acknowledgments
+
+- TensorFlow and Keras for the deep learning framework.
+- Flask for the web framework.
+- NLTK for text preprocessing tools.
+
+
+## Developed by Pranoy71 
