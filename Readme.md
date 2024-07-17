@@ -18,7 +18,7 @@ The main components of the project include:
 
 ## Project Structure
 
-- /your-project
+- /project folder
 - /templates
 - index.html
 - app.py
