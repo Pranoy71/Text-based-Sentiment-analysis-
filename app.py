@@ -5,11 +5,12 @@ import numpy as np
 import tensorflow as tf
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
+from tensorflow.keras.models import load_model
 
 app = Flask(__name__)
 
 # Load the sentiment model
-sentiment_model = tf.keras.models.load_model("mental_health_classification_model_v4_10000_feature.keras")
+sentiment_model = load_model("mental_health_classification_model_v4_10000_feature.keras")
 
 # Load the CountVectorizer
 with open('CountVectorizer_v4.pkl', 'rb') as file:
