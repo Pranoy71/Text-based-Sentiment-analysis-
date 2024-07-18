@@ -6,6 +6,8 @@ import tensorflow as tf
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 #from tensorflow.keras.models import load_model
+import nltk.corpus 
+nltk.download('stopwords')
 
 app = Flask(__name__)
 
