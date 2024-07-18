@@ -5,12 +5,21 @@ import numpy as np
 import tensorflow as tf
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
-from tensorflow.keras.models import load_model
+#from tensorflow.keras.models import load_model
 
 app = Flask(__name__)
 
 # Load the sentiment model
-sentiment_model = load_model("mental_health_classification_model_v4_10000_feature.keras")
+#sentiment_model = load_model("mental_health_classification_model_v4_10000_feature.pkl")
+
+# Load the model from the .pkl file
+with open('mental_health_classification_model_v4_10000_feature.pkl', 'rb') as file:
+    model_dict = pickle.load(file)
+
+# Reconstruct the model from the saved configuration and weights
+sentiment_model = tf.keras.models.model_from_json(model_dict["model_config"])
+sentiment_model.set_weights(model_dict["model_weights"])
+
 
 # Load the CountVectorizer
 with open('CountVectorizer_v4.pkl', 'rb') as file:
